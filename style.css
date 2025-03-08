@@ -20,27 +20,28 @@ body {
   padding: 3rem 0;
 }
 .todo-form {
-  width: 50%;
+  width: 45%;
   padding-bottom: 3rem;
 }
 .todo-header {
   display: flex;
+  width: 100%;
 }
 .todo-input {
   display: flex;
   border: none;
   height: 50px;
-  min-width: 192px;
-  flex: 1 1 8rem;
-  padding: 0 1rem;
+  width: 100%;
+  min-width: 150px;
   border-radius: 10px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  padding-left: 1rem;
 }
 .todo-add-button {
   border: none;
   width: 100px;
-  min-width: 50px;
+  min-width: 100px;
   font-size: 20px;
   background-color: #480082;
   color: white;
@@ -56,10 +57,10 @@ body {
 }
 .todo-topic {
   background-color: #8c00ff;
+  width: 100%;
+  min-width: 100px;
   list-style: none;
-  flex: 1 1 8rem;
   height: 50px;
-  min-width: 142px;
   color: white;
   display: flex;
   align-items: center;
@@ -106,3 +107,31 @@ body {
   transform: translateX(-100px);
   opacity: 0;
 }
+@media screen and (max-width: 768px) {
+  .todo-form {
+    width: 60%;
+  }
+  .header {
+    p {
+      font-size: 18px;
+    }
+  }
+  .todo-add-button {
+    min-width: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .todo-form {
+    width: 70%;
+  }
+  .header {
+    p {
+      font-size: 12px;
+    }
+  }
+}
+/* @media screen and (max-width: 400px) {
+  .todo-add-button {
+    min-width: 50px;
+  }
+} */
