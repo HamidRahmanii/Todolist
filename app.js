@@ -3,12 +3,12 @@ const todoInput = document.querySelector(".todo-input");
 const todoList = document.querySelector(".todo-list");
 const addButton = document.querySelector(".todo-add-button");
 
-let deleteClickCount = 0;
-
 //Event Listeners
 document.addEventListener("DOMContentLoaded", getTodos);
 addButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", clickTodo);
+
+let deleteClickCount = 0;
 
 //Functions
 function addTodo(e) {
@@ -59,7 +59,6 @@ function clickTodo(e) {
     parentElement.addEventListener("transitionend", () =>
       parentElement.remove()
     );
-    // removeLocalTodos(todo);
   }
 }
 function saveLocalTodos(todo) {
@@ -79,7 +78,6 @@ function removeLocalTodos(todo) {
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  // const todoIndex = todo.children[0].innerText;
   todos.splice(todos.indexOf(todo), 1);
 
   console.log("todos", todos);
